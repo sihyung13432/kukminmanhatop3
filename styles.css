@@ -1,0 +1,275 @@
+body {
+  font-family: 'MapleStory', Arial, sans-serif;
+  line-height: 1.6;
+
+  /* 배경 색상 설정 (원하는 색상 하나를 선택해서 사용하세요) */
+  background-color: #a08b40; /* 1. 차분한 그레이 화이트 (추천) */
+  /* background-color: #fff0f5; */ /* 2. 연한 핑크 (헤더/링크 색상과 조화) */
+  /* background-color: #e8f5e9; */ /* 3. 아주 연한 초록 (헤더 배경과 조화) */
+  
+  margin: 0;
+  padding: 0;
+}
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #969696; /* 연하게 변경 */
+    color: #bf1890;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    color: #681a49;
+    text-decoration: none;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .featured-post {
+    display: flex;
+    align-items: center;
+  }
+  
+  .featured-post img {
+    max-width: 50%;
+    margin-right: 2rem;
+  }
+  
+  .post-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    background-color: #ff2a86; /* 연하게 변경 */
+    color: #673b3b;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+  
+  .blog-post {
+    /* Blog post card styles go here */
+  }
+  
+  footer {
+    background-color: #91e49e; /* 연하게 변경 */
+    color: #402222;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* ... (이전 코드와 동일) ... */
+
+.sidebar {
+    flex: 1;
+    padding: 1rem;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgb(210, 118, 118);
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* ... (이전 코드와 동일) ... */
+
+.sidebar {
+    position: fixed; /* 우측에 고정 */
+    top: 100px; /* 상단으로 고정 */
+    right: 0; /* 우측으로 고정 */
+    width: 250px; /* 사이드바의 너비 */
+    padding: 1rem;
+    background-color: #70bb86;
+    box-shadow: 0 0 10px rgb(238, 235, 235);
+  }
+  
+  /* ... (이전 코드와 동일) ... */
+
+  /* 이미지 슬라이드를 위한 스타일 */
+.slideshow {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .slideshow img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  
+  .slideshow img.active {
+    opacity: 1;
+  }
+
+  /* 메이플스토리 글꼴 적용 */
+@font-face {
+    font-family: 'MapleStory';
+    src: url('WooriMelon-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'MapleStory', Arial, sans-serif;
+  }
+
+  /* ... (기존 코드와 동일) ... */
+
+.post-form {
+    margin-top: 2rem;
+  }
+  
+  .post-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .post-form input,
+  .post-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  #post-container .post {
+    background-color: rgb(0, 0, 0); /* 흰색 배경, 85% 불투명도 */
+    border-radius: 10px;                         /* 모서리 둥글게 */
+    padding: 20px;                               /* 안쪽 여백 */
+    margin-bottom: 20px;                         /* 게시글 간 간격 */
+    box-shadow: 0 4px 8px rgb(255, 255, 255);    /* 살짝 그림자 효과 */
+    border: 1px solid #be6161;                      /* 테두리 실선 */
+    backdrop-filter: blur(5px);                  /* 배경 살짝 흐리게 (선택사항) */
+    transition: transform 0.2s ease;             /* 마우스 올릴 때 효과용 */
+}
+
+/* 마우스를 올렸을 때 더 선명하게 보이게 하려면 추가 */
+#post-container .post:hover {
+    background-color: rgba(220, 152, 152, 0);    /* 마우스 올리면 완전 불투명 */
+    transform: translateY(-5px);                 /* 살짝 위로 뜨는 효과 */
+}
+
+/* 게시글 내 텍스트 색상 고정 (가독성) */
+#post-container .post h2 {
+    color: #ce8db5;
+    margin-top: 0;
+}
+
+#post-container .post p {
+    color: #362a8d;
+    line-height: 1.6;
+}
+  
+  .post {
+    border: 1px solid #5a5ac4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ... (이전 코드와 동일) ... */
+
+/* 일주일 일정을 위한 스타일 */
+.weekly-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+  
+  .weekly-schedule th, .weekly-schedule td {
+    padding: 1rem;
+    border: 1px solid #88e17e;
+    text-align: center;
+  }
+  
+  .weekly-schedule th {
+    background-color: #aa1b1b;
+    font-size: 1.2rem;
+  }
+  
+  .weekly-schedule td {
+    font-size: 1rem;
+  }
+  .sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #7a7a7a;
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* 기본적으로 오른쪽 밖으로 숨김 */
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgb(255, 255, 255);
+  }
+  
+  .sidebar.active {
+    transform: translateX(0); /* active 클래스가 붙으면 화면 안으로 들어옴 */
+  }
+  /* 방명록 HTML 파일의 <style> 태그 안에 이 부분을 덮어쓰세요 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  
+  /* [수정된 부분] 실제 작동하는 인터넷 이미지 주소로 변경했습니다. */
+  background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809'); 
+  
+  background-size: cover; /* 화면을 꽉 채우도록 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat; /* 반복 안 함 */
+  background-attachment: fixed; /* 스크롤 해도 배경 고정 */
+}
